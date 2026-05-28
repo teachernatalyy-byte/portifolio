@@ -1,0 +1,306 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+
+  .header {
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    margin-bottom: 2rem;
+  }
+  .badge {
+    display: inline-block;
+    background: #EEEDFE;
+    color: #3C3489;
+    font-size: 12px;
+    padding: 4px 14px;
+    border-radius: var(--border-radius-md);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 0.4rem;
+  }
+  .header p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+    padding: 0 0.25rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transition: border-color 0.15s;
+  }
+  .card:hover {
+    border-color: var(--color-border-secondary);
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    background: var(--color-background-secondary);
+  }
+  .card-body {
+    padding: 10px 12px 12px;
+  }
+  .card-tag {
+    font-size: 11px;
+    font-weight: 500;
+    color: #534AB7;
+    background: #EEEDFE;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+  .card-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  .card-desc {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  .package {
+    background: var(--color-background-primary);
+    border: 2px solid #534AB7;
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  .package-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #534AB7;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 18px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .package h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  .package .price {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    color: #534AB7;
+    margin-bottom: 0.25rem;
+  }
+  .package .price-sub {
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.25rem;
+  }
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    margin: 1rem 0;
+  }
+  .includes-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+  .include-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: var(--color-text-primary);
+    line-height: 1.5;
+  }
+  .include-item i {
+    color: #534AB7;
+    font-size: 16px;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+  .highlight-box {
+    background: #EEEDFE;
+    border-radius: var(--border-radius-md);
+    padding: 10px 14px;
+    margin-top: 1rem;
+    font-size: 13px;
+    color: #3C3489;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .highlight-box i {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .format-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  .format-pill {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .format-pill i { font-size: 14px; }
+</style>
+
+<div style="padding: 0 0.5rem 2rem;">
+
+  <div class="header">
+    <div class="badge">Portfólio de materiais</div>
+    <h1>Teacher Nataly English Hub</h1>
+    <p>Materiais interativos prontos para usar em qualquer nível</p>
+  </div>
+
+  <div class="section-title">Exemplos de materiais produzidos</div>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c0c7e179-63eb-403d-a11b-46675501edf9/id-preview-7b128473--df13214d-b3df-45e0-88be-c3d5da01cdc4.lovable.app-1778847829134.png" alt="Conditionals in English" />
+      <div class="card-body">
+        <span class="card-tag">Grammar · B1/B2</span>
+        <div class="card-title">Conditionals in English</div>
+        <div class="card-desc">Curso completo bilíngue — Zero, First, Second, Third e Mixed Conditionals</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e638e6aa-bb4b-42a5-99be-6b4617a12564/id-preview-202a7a83--c2c3907c-02ab-4a38-85a6-1577f97d90a5.lovable.app-1779144635522.png" alt="Indirect Questions" />
+      <div class="card-body">
+        <span class="card-tag">Grammar · A2/B1</span>
+        <div class="card-title">Indirect Questions</div>
+        <div class="card-desc">Aula interativa para adultos com foco em perguntas indiretas</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c0753f7b-73a1-4afe-bece-69798ebed95c/id-preview-eee0c0d4--64a55b46-8eb3-4b6c-bcf1-ff3dcda2f0ab.lovable.app-1777988490510.png" alt="Expressões Idiomáticas" />
+      <div class="card-body">
+        <span class="card-tag">Vocabulary · A2+</span>
+        <div class="card-title">Expressões Idiomáticas</div>
+        <div class="card-desc">Warm-up interativo com idioms para aquecimento de aula</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/30d0ab8e-ecde-44b6-b5de-4f6772a32e5b/id-preview-5f5fe046--438a2212-5eda-4fd0-b44d-37594b5269e4.lovable.app-1777378301252.png" alt="Reported Speech" />
+      <div class="card-body">
+        <span class="card-tag">Grammar · A2</span>
+        <div class="card-title">Reported Speech</div>
+        <div class="card-desc">Aula bilíngue interativa com vocabulário e compreensão de leitura</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/81171463-3d4b-4f8b-aeea-0268150d049e/id-preview-ceb45ad7--83195e36-2da7-4029-8d0e-b52fe40d3b2a.lovable.app-1779797440376.png" alt="Hobbies & Free Time" />
+      <div class="card-body">
+        <span class="card-tag">Speaking · A1/A2</span>
+        <div class="card-title">Hobbies & Free Time</div>
+        <div class="card-desc">Warm-up de conversação com tradução ao clicar nas palavras</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/72667a39-334f-49c0-94d8-b7c6da378525/id-preview-880069bf--82d18a9c-ef3b-4650-9433-a4e34c150caf.lovable.app-1779923119388.png" alt="Speak London" />
+      <div class="card-body">
+        <span class="card-tag">Speaking · A2/B1</span>
+        <div class="card-title">Speak London</div>
+        <div class="card-desc">25 aulas de conversação com fotos, diálogos e frases do dia a dia</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="package">
+    <div class="package-badge">Pacote disponível</div>
+    <h2>Pack 4 Aulas Personalizadas</h2>
+    <div class="price">R$ 87</div>
+    <div class="price-sub">pagamento único · entrega em até 5 dias úteis</div>
+
+    <hr class="divider" />
+
+    <div class="includes-title">O que está incluído</div>
+
+    <div class="include-item">
+      <i class="ti ti-devices" aria-hidden="true"></i>
+      <span>4 materiais interativos em formato de site/app — prontos para compartilhar com os alunos</span>
+    </div>
+    <div class="include-item">
+      <i class="ti ti-file-text" aria-hidden="true"></i>
+      <span>4 planos de aula completos — um para cada material, com objetivos, etapas e tempo sugerido</span>
+    </div>
+    <div class="include-item">
+      <i class="ti ti-check" aria-hidden="true"></i>
+      <span>Materiais prontos para usar no online ou presencial — qualquer nível, qualquer faixa etária</span>
+    </div>
+    <div class="include-item">
+      <i class="ti ti-check" aria-hidden="true"></i>
+      <span>Pode ser exportado em PDF também</span>
+    </div>
+
+    <div class="highlight-box">
+      <i class="ti ti-bulb" aria-hidden="true"></i>
+      <span>O professor escolhe os 4 tópicos que quer — basta enviar via WhatsApp e os materiais são produzidos sob medida.</span>
+    </div>
+
+    <div class="format-row">
+      <div class="format-pill"><i class="ti ti-world" aria-hidden="true"></i> Site interativo</div>
+      <div class="format-pill"><i class="ti ti-file-type-pdf" aria-hidden="true"></i> PDF disponível</div>
+      <div class="format-pill"><i class="ti ti-device-mobile" aria-hidden="true"></i> Funciona no celular</div>
+      <div class="format-pill"><i class="ti ti-school" aria-hidden="true"></i> Qualquer nível</div>
+    </div>
+  </div>
+
+</div>
